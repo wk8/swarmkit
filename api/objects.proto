@@ -122,6 +122,12 @@ message Service {
 	// UpdateStatus contains the status of an update, if one is in
 	// progress.
 	UpdateStatus update_status = 5;
+
+	// services, as well as all service-level resources, can only be deleted
+	// after all the service's containers have properly shut down
+	// when a user requests a deletion, we just flip this flag
+	// the deallocator will take it from there
+	bool pending_delete = 7;
 }
 
 // Endpoint specified all the network parameters required to
@@ -292,6 +298,12 @@ message Network {
 	// Runtime state of IPAM options. This may not reflect the
 	// ipam options from NetworkSpec.
 	IPAMOptions ipam = 5 [(gogoproto.customname) = "IPAM"];
+
+	// services, as well as all service-level resources, can only be deleted
+	// after all the service's containers have properly shut down
+	// when a user requests a deletion, we just flip this flag
+	// the deallocator will take it from there
+	bool pending_delete = 6;
 }
 
 // Cluster provides global cluster settings.
