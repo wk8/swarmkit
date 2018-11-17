@@ -165,6 +165,7 @@
 		GenericResource
 		Resources
 		ResourceRequirements
+		OperatingSystem
 		Platform
 		PluginDescription
 		EngineDescription

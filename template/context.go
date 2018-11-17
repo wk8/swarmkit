@@ -14,12 +14,6 @@ import (
 	"github.com/pkg/errors"
 )
 
-// Platform holds information about the underlying platform of the node
-type Platform struct {
-	Architecture string
-	OS           string
-}
-
 // Context defines the strict set of values that can be injected into a
 // template expression in SwarmKit data structure.
 // NOTE: Be very careful adding any fields to this structure with types
@@ -35,7 +29,7 @@ type Context struct {
 	Node struct {
 		ID       string
 		Hostname string
-		Platform Platform
+		Platform api.Platform
 	}
 
 	Task struct {
@@ -65,7 +59,8 @@ func NewContext(n *api.NodeDescription, t *api.Task) (ctx Context) {
 		ctx.Node.Hostname = n.Hostname
 		ctx.Node.Platform = Platform{
 			Architecture: n.Platform.Architecture,
-			OS:           n.Platform.OS,
+			OS:           n.Platform.OperatingSystem.Name,
+			// TODO wkpo version?
 		}
 	}
 	ctx.Task.ID = t.ID

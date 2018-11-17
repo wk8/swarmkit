@@ -148,6 +148,7 @@ func NodeMatches(constraints []Constraint, n *api.Node) bool {
 			if !constraint.Match(n.Role.String()) {
 				return false
 			}
+		// TODO wkpo faut voir a quel niveau on surface qu'on peut pas donner version sans name?
 		case strings.EqualFold(constraint.key, "node.platform.os"):
 			if n.Description == nil || n.Description.Platform == nil {
 				if !constraint.Match("") {
@@ -155,7 +156,7 @@ func NodeMatches(constraints []Constraint, n *api.Node) bool {
 				}
 				continue
 			}
-			if !constraint.Match(n.Description.Platform.OS) {
+			if !constraint.Match(n.Description.Platform.OperatingSystem.Name) {
 				return false
 			}
 		case strings.EqualFold(constraint.key, "node.platform.arch"):

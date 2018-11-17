@@ -79,12 +79,23 @@ message ResourceRequirements {
 	Resources reservations = 2;
 }
 
+message OperatingSystem {
+	// The OS' name (e.g. linux)
+	string name = 1;
+
+	// The OS's version - optional
+	string version = 2;
+}
+
 message Platform {
+	// 2 was 'OS' when it was just a string
+	reserved 2;
+
 	// Architecture (e.g. x86_64)
 	string architecture = 1;
 
-	// Operating System (e.g. linux)
-	string os = 2 [(gogoproto.customname) = "OS"];
+	// Operating System
+	OperatingSystem operating_system = 3;
 }
 
 // PluginDescription describes an engine plugin.
