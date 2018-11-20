@@ -95,7 +95,7 @@ message Platform {
 	string architecture = 1;
 
 	// Operating System
-	OperatingSystem operating_system = 3;
+	OperatingSystem operating_system = 3; // [(gogoproto.wkpo) = "wkpo"];
 }
 
 // PluginDescription describes an engine plugin.
