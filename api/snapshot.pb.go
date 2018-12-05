@@ -581,6 +581,10 @@ func valueToStringSnapshot(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *StoreSnapshot) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*StoreSnapshot)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -910,6 +914,10 @@ func (m *StoreSnapshot) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ClusterSnapshot) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ClusterSnapshot)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1053,6 +1061,10 @@ func (m *ClusterSnapshot) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Snapshot) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Snapshot)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

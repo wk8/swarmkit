@@ -1523,6 +1523,10 @@ func valueToStringService(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *Point) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Point)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1611,6 +1615,10 @@ func (m *Point) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Rectangle) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Rectangle)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1727,6 +1735,10 @@ func (m *Rectangle) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Feature) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Feature)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1839,6 +1851,10 @@ func (m *Feature) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RouteNote) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RouteNote)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1951,6 +1967,10 @@ func (m *RouteNote) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RouteSummary) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RouteSummary)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2077,6 +2097,10 @@ func (m *RouteSummary) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *HealthCheckRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HealthCheckRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2156,6 +2180,10 @@ func (m *HealthCheckRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *HealthCheckResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HealthCheckResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

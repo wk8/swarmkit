@@ -770,6 +770,10 @@ func _GenericResource_OneofUnmarshaler(msg proto.Message, tag, wire int, b *prot
 func _GenericResource_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*GenericResource)
 	// resource
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*GenericResource)
+	}
 	switch x := m.Resource.(type) {
 	case *GenericResource_NamedResourceSpec:
 		s := proto.Size(x.NamedResourceSpec)
@@ -1215,6 +1219,10 @@ func _TaskStatus_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buf
 func _TaskStatus_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*TaskStatus)
 	// runtime_status
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*TaskStatus)
+	}
 	switch x := m.RuntimeStatus.(type) {
 	case *TaskStatus_Container:
 		s := proto.Size(x.Container)
@@ -1589,6 +1597,10 @@ func _PlacementPreference_OneofUnmarshaler(msg proto.Message, tag, wire int, b *
 func _PlacementPreference_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*PlacementPreference)
 	// Preference
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*PlacementPreference)
+	}
 	switch x := m.Preference.(type) {
 	case *PlacementPreference_Spread:
 		s := proto.Size(x.Spread)
@@ -1805,6 +1817,10 @@ func _SecretReference_OneofUnmarshaler(msg proto.Message, tag, wire int, b *prot
 func _SecretReference_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*SecretReference)
 	// target
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*SecretReference)
+	}
 	switch x := m.Target.(type) {
 	case *SecretReference_File:
 		s := proto.Size(x.File)
@@ -1905,6 +1921,10 @@ func _ConfigReference_OneofUnmarshaler(msg proto.Message, tag, wire int, b *prot
 func _ConfigReference_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*ConfigReference)
 	// target
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*ConfigReference)
+	}
 	switch x := m.Target.(type) {
 	case *ConfigReference_File:
 		s := proto.Size(x.File)
@@ -2093,6 +2113,10 @@ func _Privileges_CredentialSpec_OneofUnmarshaler(msg proto.Message, tag, wire in
 func _Privileges_CredentialSpec_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*Privileges_CredentialSpec)
 	// source
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*Privileges_CredentialSpec)
+	}
 	switch x := m.Source.(type) {
 	case *Privileges_CredentialSpec_File:
 		n += proto.SizeVarint(1<<3 | proto.WireBytes)
@@ -8255,6 +8279,10 @@ func valueToStringTypes(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *Version) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Version)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8324,6 +8352,10 @@ func (m *Version) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *IndexEntry) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*IndexEntry)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8432,6 +8464,10 @@ func (m *IndexEntry) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Annotations) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Annotations)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8660,6 +8696,10 @@ func (m *Annotations) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NamedGenericResource) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NamedGenericResource)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8768,6 +8808,10 @@ func (m *NamedGenericResource) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *DiscreteGenericResource) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*DiscreteGenericResource)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8866,6 +8910,10 @@ func (m *DiscreteGenericResource) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GenericResource) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GenericResource)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8980,6 +9028,10 @@ func (m *GenericResource) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Resources) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Resources)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -9099,6 +9151,10 @@ func (m *Resources) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ResourceRequirements) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ResourceRequirements)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -9215,6 +9271,10 @@ func (m *ResourceRequirements) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Platform) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Platform)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -9323,6 +9383,10 @@ func (m *Platform) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *PluginDescription) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*PluginDescription)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -9431,6 +9495,10 @@ func (m *PluginDescription) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *EngineDescription) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*EngineDescription)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -9659,6 +9727,10 @@ func (m *EngineDescription) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NodeDescription) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NodeDescription)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -9890,6 +9962,10 @@ func (m *NodeDescription) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NodeTLSInfo) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NodeTLSInfo)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10033,6 +10109,10 @@ func (m *NodeTLSInfo) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RaftMemberStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RaftMemberStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10151,6 +10231,10 @@ func (m *RaftMemberStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NodeStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NodeStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10278,6 +10362,10 @@ func (m *NodeStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Image) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Image)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10357,6 +10445,10 @@ func (m *Image) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Mount) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Mount)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10622,6 +10714,10 @@ func (m *Mount) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Mount_BindOptions) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Mount_BindOptions)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10691,6 +10787,10 @@ func (m *Mount_BindOptions) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Mount_VolumeOptions) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Mount_VolumeOptions)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -10912,6 +11012,10 @@ func (m *Mount_VolumeOptions) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Mount_TmpfsOptions) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Mount_TmpfsOptions)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -11029,6 +11133,10 @@ func (m *Mount_TmpfsOptions) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RestartPolicy) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RestartPolicy)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -11183,6 +11291,10 @@ func (m *RestartPolicy) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *UpdateConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*UpdateConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -11364,6 +11476,10 @@ func (m *UpdateConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *UpdateStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*UpdateStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -11528,6 +11644,10 @@ func (m *UpdateStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ContainerStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ContainerStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -11645,6 +11765,10 @@ func (m *ContainerStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *PortStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*PortStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -11726,6 +11850,10 @@ func (m *PortStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *TaskStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*TaskStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -12013,6 +12141,10 @@ func (m *TaskStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NetworkAttachmentConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NetworkAttachmentConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -12268,6 +12400,10 @@ func (m *NetworkAttachmentConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *IPAMConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*IPAMConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -12542,6 +12678,10 @@ func (m *IPAMConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *PortConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*PortConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -12697,6 +12837,10 @@ func (m *PortConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Driver) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Driver)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -12894,6 +13038,10 @@ func (m *Driver) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *IPAMOptions) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*IPAMOptions)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13008,6 +13156,10 @@ func (m *IPAMOptions) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Peer) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Peer)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13116,6 +13268,10 @@ func (m *Peer) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *WeightedPeer) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*WeightedPeer)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13218,6 +13374,10 @@ func (m *WeightedPeer) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *IssuanceStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*IssuanceStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13316,6 +13476,10 @@ func (m *IssuanceStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AcceptancePolicy) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AcceptancePolicy)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13397,6 +13561,10 @@ func (m *AcceptancePolicy) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AcceptancePolicy_RoleAdmissionPolicy) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AcceptancePolicy_RoleAdmissionPolicy)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13519,6 +13687,10 @@ func (m *AcceptancePolicy_RoleAdmissionPolicy) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AcceptancePolicy_RoleAdmissionPolicy_Secret) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AcceptancePolicy_RoleAdmissionPolicy_Secret)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13629,6 +13801,10 @@ func (m *AcceptancePolicy_RoleAdmissionPolicy_Secret) Unmarshal(dAtA []byte) err
 	return nil
 }
 func (m *ExternalCA) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ExternalCA)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -13876,6 +14052,10 @@ func (m *ExternalCA) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *CAConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*CAConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14071,6 +14251,10 @@ func (m *CAConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *OrchestrationConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*OrchestrationConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14140,6 +14324,10 @@ func (m *OrchestrationConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *TaskDefaults) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*TaskDefaults)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14223,6 +14411,10 @@ func (m *TaskDefaults) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *DispatcherConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*DispatcherConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14306,6 +14498,10 @@ func (m *DispatcherConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RaftConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RaftConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14451,6 +14647,10 @@ func (m *RaftConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *EncryptionConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*EncryptionConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14521,6 +14721,10 @@ func (m *EncryptionConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SpreadOver) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SpreadOver)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14600,6 +14804,10 @@ func (m *SpreadOver) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *PlacementPreference) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*PlacementPreference)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14682,6 +14890,10 @@ func (m *PlacementPreference) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Placement) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Placement)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14842,6 +15054,10 @@ func (m *Placement) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *JoinTokens) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*JoinTokens)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -14950,6 +15166,10 @@ func (m *JoinTokens) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RootCA) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RootCA)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -15173,6 +15393,10 @@ func (m *RootCA) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Certificate) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Certificate)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -15363,6 +15587,10 @@ func (m *Certificate) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *EncryptionKey) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*EncryptionKey)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -15511,6 +15739,10 @@ func (m *EncryptionKey) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ManagerStatus) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ManagerStatus)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -15648,6 +15880,10 @@ func (m *ManagerStatus) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *FileTarget) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*FileTarget)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -15804,6 +16040,10 @@ func (m *FileTarget) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SecretReference) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SecretReference)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -15944,6 +16184,10 @@ func (m *SecretReference) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ConfigReference) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ConfigReference)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16084,6 +16328,10 @@ func (m *ConfigReference) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *BlacklistedCertificate) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*BlacklistedCertificate)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16167,6 +16415,10 @@ func (m *BlacklistedCertificate) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *HealthConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HealthConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16364,6 +16616,10 @@ func (m *HealthConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *MaybeEncryptedRecord) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*MaybeEncryptedRecord)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16495,6 +16751,10 @@ func (m *MaybeEncryptedRecord) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *RootRotation) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RootRotation)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16638,6 +16898,10 @@ func (m *RootRotation) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Privileges) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Privileges)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16754,6 +17018,10 @@ func (m *Privileges) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Privileges_CredentialSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Privileges_CredentialSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -16862,6 +17130,10 @@ func (m *Privileges_CredentialSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Privileges_SELinuxContext) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Privileges_SELinuxContext)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

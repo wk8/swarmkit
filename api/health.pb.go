@@ -424,6 +424,10 @@ func valueToStringHealth(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *HealthCheckRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HealthCheckRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -503,6 +507,10 @@ func (m *HealthCheckRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *HealthCheckResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HealthCheckResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

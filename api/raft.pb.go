@@ -466,6 +466,10 @@ func _StoreAction_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Bu
 func _StoreAction_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*StoreAction)
 	// target
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*StoreAction)
+	}
 	switch x := m.Target.(type) {
 	case *StoreAction_Node:
 		s := proto.Size(x.Node)
@@ -2431,6 +2435,10 @@ func valueToStringRaft(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *RaftMember) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*RaftMember)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2588,6 +2596,10 @@ func (m *RaftMember) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *JoinRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*JoinRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2667,6 +2679,10 @@ func (m *JoinRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *JoinResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*JoinResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2829,6 +2845,10 @@ func (m *JoinResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *LeaveRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LeaveRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2912,6 +2932,10 @@ func (m *LeaveRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *LeaveResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LeaveResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2962,6 +2986,10 @@ func (m *LeaveResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ProcessRaftMessageRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ProcessRaftMessageRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3045,6 +3073,10 @@ func (m *ProcessRaftMessageRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ProcessRaftMessageResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ProcessRaftMessageResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3095,6 +3127,10 @@ func (m *ProcessRaftMessageResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *StreamRaftMessageRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*StreamRaftMessageRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3178,6 +3214,10 @@ func (m *StreamRaftMessageRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *StreamRaftMessageResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*StreamRaftMessageResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3228,6 +3268,10 @@ func (m *StreamRaftMessageResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ResolveAddressRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ResolveAddressRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3297,6 +3341,10 @@ func (m *ResolveAddressRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ResolveAddressResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ResolveAddressResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3376,6 +3424,10 @@ func (m *ResolveAddressResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *InternalRaftRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*InternalRaftRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3476,6 +3528,10 @@ func (m *InternalRaftRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *StoreAction) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*StoreAction)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

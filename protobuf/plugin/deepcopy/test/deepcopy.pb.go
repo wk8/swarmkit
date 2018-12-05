@@ -495,6 +495,10 @@ func _OneOf_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) 
 func _OneOf_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*OneOf)
 	// fields
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*OneOf)
+	}
 	switch x := m.Fields.(type) {
 	case *OneOf_Field1:
 		n += proto.SizeVarint(1<<3 | proto.WireFixed64)
@@ -534,6 +538,10 @@ func _OneOf_OneofSizer(msg proto.Message) (n int) {
 		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
 	}
 	// fieldsTwo
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*OneOf)
+	}
 	switch x := m.FieldsTwo.(type) {
 	case *OneOf_Field10:
 		s := proto.Size(x.Field10)

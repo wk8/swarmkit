@@ -371,6 +371,10 @@ func _Assignment_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buf
 func _Assignment_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*Assignment)
 	// item
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*Assignment)
+	}
 	switch x := m.Item.(type) {
 	case *Assignment_Task:
 		s := proto.Size(x.Task)
@@ -2261,6 +2265,10 @@ func valueToStringDispatcher(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *SessionRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SessionRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2373,6 +2381,10 @@ func (m *SessionRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SessionMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SessionMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2578,6 +2590,10 @@ func (m *SessionMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *HeartbeatRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HeartbeatRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2657,6 +2673,10 @@ func (m *HeartbeatRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *HeartbeatResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*HeartbeatResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2737,6 +2757,10 @@ func (m *HeartbeatResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *UpdateTaskStatusRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*UpdateTaskStatusRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2847,6 +2871,10 @@ func (m *UpdateTaskStatusRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *UpdateTaskStatusRequest_TaskStatusUpdate) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*UpdateTaskStatusRequest_TaskStatusUpdate)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2959,6 +2987,10 @@ func (m *UpdateTaskStatusRequest_TaskStatusUpdate) Unmarshal(dAtA []byte) error 
 	return nil
 }
 func (m *UpdateTaskStatusResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*UpdateTaskStatusResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3009,6 +3041,10 @@ func (m *UpdateTaskStatusResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *TasksRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*TasksRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3088,6 +3124,10 @@ func (m *TasksRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *TasksMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*TasksMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3169,6 +3209,10 @@ func (m *TasksMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AssignmentsRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AssignmentsRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3248,6 +3292,10 @@ func (m *AssignmentsRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Assignment) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Assignment)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3394,6 +3442,10 @@ func (m *Assignment) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AssignmentChange) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AssignmentChange)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3496,6 +3548,10 @@ func (m *AssignmentChange) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AssignmentsMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AssignmentsMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

@@ -347,6 +347,10 @@ func _Object_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer)
 func _Object_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*Object)
 	// Object
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*Object)
+	}
 	switch x := m.Object.(type) {
 	case *Object_Node:
 		s := proto.Size(x.Node)
@@ -854,6 +858,10 @@ func _SelectBy_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffe
 func _SelectBy_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*SelectBy)
 	// By
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*SelectBy)
+	}
 	switch x := m.By.(type) {
 	case *SelectBy_ID:
 		n += proto.SizeVarint(1<<3 | proto.WireBytes)
@@ -2814,6 +2822,10 @@ func valueToStringWatch(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *Object) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Object)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3152,6 +3164,10 @@ func (m *Object) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SelectBySlot) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SelectBySlot)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3250,6 +3266,10 @@ func (m *SelectBySlot) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SelectByCustom) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SelectByCustom)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3387,6 +3407,10 @@ func (m *SelectByCustom) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SelectBy) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SelectBy)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3883,6 +3907,10 @@ func (m *SelectBy) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *WatchRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*WatchRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4017,6 +4045,10 @@ func (m *WatchRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *WatchRequest_WatchEntry) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*WatchRequest_WatchEntry)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4146,6 +4178,10 @@ func (m *WatchRequest_WatchEntry) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *WatchMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*WatchMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4260,6 +4296,10 @@ func (m *WatchMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *WatchMessage_Event) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*WatchMessage_Event)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

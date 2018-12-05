@@ -1,6 +1,8 @@
 package storeobject
 
 import (
+	"fmt"
+	"github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
 	"strings"
 
 	"github.com/docker/swarmkit/protobuf/plugin"
@@ -854,6 +856,24 @@ func (d *storeObjectGen) Generate(file *generator.FileDescriptor) {
 		if err != nil {
 			// no StoreObject extension
 			continue
+		}
+
+		var E_Wkpo = &proto.ExtensionDesc{
+			ExtendedType:  (*descriptor.FieldOptions)(nil),
+			ExtensionType: (*string)(nil),
+			Field:         70000,
+			Name:          "gogoproto.wkpo",
+			Tag:           "bytes,70000,opt,name=wkpo",
+			Filename:      "gogo.proto",
+		}
+
+		for _, field := range m.GetField() {
+			if field.Options != nil {
+				v, err := proto.GetExtension(field.Options, E_Wkpo)
+				if err == nil && v.(*string) != nil {
+					fmt.Println("bordel coucou " + *v.(*string))
+				}
+			}
 		}
 
 		d.genMsgStoreObject(m, storeObjIntf.(*plugin.StoreObject))

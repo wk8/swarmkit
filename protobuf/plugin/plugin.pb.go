@@ -562,6 +562,10 @@ func valueToStringPlugin(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *WatchSelectors) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*WatchSelectors)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -886,6 +890,10 @@ func (m *WatchSelectors) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *StoreObject) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*StoreObject)
+	}
 	var hasFields [1]uint64
 	l := len(dAtA)
 	iNdEx := 0
@@ -975,6 +983,10 @@ func (m *StoreObject) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *TLSAuthorization) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*TLSAuthorization)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

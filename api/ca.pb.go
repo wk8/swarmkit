@@ -1437,6 +1437,10 @@ func valueToStringCa(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *NodeCertificateStatusRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NodeCertificateStatusRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1516,6 +1520,10 @@ func (m *NodeCertificateStatusRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NodeCertificateStatusResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NodeCertificateStatusResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1632,6 +1640,10 @@ func (m *NodeCertificateStatusResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *IssueNodeCertificateRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*IssueNodeCertificateRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1780,6 +1792,10 @@ func (m *IssueNodeCertificateRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *IssueNodeCertificateResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*IssueNodeCertificateResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1878,6 +1894,10 @@ func (m *IssueNodeCertificateResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GetRootCACertificateRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GetRootCACertificateRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1928,6 +1948,10 @@ func (m *GetRootCACertificateRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GetRootCACertificateResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GetRootCACertificateResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2009,6 +2033,10 @@ func (m *GetRootCACertificateResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GetUnlockKeyRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GetUnlockKeyRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2059,6 +2087,10 @@ func (m *GetUnlockKeyRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GetUnlockKeyResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GetUnlockKeyResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

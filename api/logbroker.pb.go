@@ -1874,6 +1874,10 @@ func valueToStringLogbroker(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *LogSubscriptionOptions) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LogSubscriptionOptions)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2058,6 +2062,10 @@ func (m *LogSubscriptionOptions) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *LogSelector) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LogSelector)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2195,6 +2203,10 @@ func (m *LogSelector) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *LogContext) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LogContext)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2332,6 +2344,10 @@ func (m *LogContext) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *LogAttr) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LogAttr)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2440,6 +2456,10 @@ func (m *LogAttr) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *LogMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*LogMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2634,6 +2654,10 @@ func (m *LogMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SubscribeLogsRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SubscribeLogsRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2750,6 +2774,10 @@ func (m *SubscribeLogsRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SubscribeLogsMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SubscribeLogsMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2831,6 +2859,10 @@ func (m *SubscribeLogsMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ListenSubscriptionsRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ListenSubscriptionsRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -2881,6 +2913,10 @@ func (m *ListenSubscriptionsRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SubscriptionMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SubscriptionMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3046,6 +3082,10 @@ func (m *SubscriptionMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *PublishLogsMessage) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*PublishLogsMessage)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3176,6 +3216,10 @@ func (m *PublishLogsMessage) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *PublishLogsResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*PublishLogsResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

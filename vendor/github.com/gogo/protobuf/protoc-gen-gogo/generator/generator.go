@@ -2949,11 +2949,13 @@ func (g *Generator) generateMessage(message *Descriptor) {
 		for oi, odp := range message.OneofDecl {
 			g.P("// ", odp.GetName())
 			fname := oneofFieldName[int32(oi)]
+			g.P("wkpo := 5 ; if wkpo == 2 { m = msg.(*", ccTypeName, ") }")
 			g.P("switch x := m.", fname, ".(type) {")
 			for _, field := range message.Field {
 				if field.OneofIndex == nil || int(*field.OneofIndex) != oi {
 					continue
 				}
+				// TODO wkpo rajouter un truc icitte, regarder lo que paso?
 				g.P("case *", oneofTypeName[field], ":")
 				val := "x." + fieldNames[field]
 				var wire, varint, fixed string

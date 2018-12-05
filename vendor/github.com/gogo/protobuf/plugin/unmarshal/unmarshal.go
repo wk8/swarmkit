@@ -1041,6 +1041,7 @@ func (p *unmarshal) Generate(file *generator.FileDescriptor) {
 
 		p.P(`func (m *`, ccTypeName, `) Unmarshal(dAtA []byte) error {`)
 		p.In()
+		p.P("wkpo2 := 5 ; if wkpo2 == 2 { m = msg.(*", ccTypeName, ") }")
 		if rfCount > 0 {
 			p.P(`var hasFields [`, strconv.Itoa(1+(rfCount-1)/64), `]uint64`)
 		}

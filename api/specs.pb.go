@@ -280,6 +280,10 @@ func _ServiceSpec_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Bu
 func _ServiceSpec_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*ServiceSpec)
 	// mode
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*ServiceSpec)
+	}
 	switch x := m.Mode.(type) {
 	case *ServiceSpec_Replicated:
 		s := proto.Size(x.Replicated)
@@ -472,6 +476,10 @@ func _TaskSpec_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffe
 func _TaskSpec_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*TaskSpec)
 	// runtime
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*TaskSpec)
+	}
 	switch x := m.Runtime.(type) {
 	case *TaskSpec_Attachment:
 		s := proto.Size(x.Attachment)
@@ -793,6 +801,10 @@ func _NetworkSpec_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Bu
 func _NetworkSpec_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*NetworkSpec)
 	// config_from
+	wkpo := 5
+	if wkpo == 2 {
+		m = msg.(*NetworkSpec)
+	}
 	switch x := m.ConfigFrom.(type) {
 	case *NetworkSpec_Network:
 		n += proto.SizeVarint(8<<3 | proto.WireBytes)
@@ -3341,6 +3353,10 @@ func valueToStringSpecs(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *NodeSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NodeSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3478,6 +3494,10 @@ func (m *NodeSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ServiceSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ServiceSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3782,6 +3802,10 @@ func (m *ServiceSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ReplicatedService) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ReplicatedService)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3851,6 +3875,10 @@ func (m *ReplicatedService) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GlobalService) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GlobalService)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -3901,6 +3929,10 @@ func (m *GlobalService) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *TaskSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*TaskSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4260,6 +4292,10 @@ func (m *TaskSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ResourceReference) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ResourceReference)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4358,6 +4394,10 @@ func (m *ResourceReference) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *GenericRuntimeSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*GenericRuntimeSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4470,6 +4510,10 @@ func (m *GenericRuntimeSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NetworkAttachmentSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NetworkAttachmentSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -4549,6 +4593,10 @@ func (m *NetworkAttachmentSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ContainerSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ContainerSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5566,6 +5614,10 @@ func (m *ContainerSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ContainerSpec_PullOptions) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ContainerSpec_PullOptions)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5645,6 +5697,10 @@ func (m *ContainerSpec_PullOptions) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ContainerSpec_DNSConfig) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ContainerSpec_DNSConfig)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5782,6 +5838,10 @@ func (m *ContainerSpec_DNSConfig) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *EndpointSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*EndpointSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5882,6 +5942,10 @@ func (m *EndpointSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NetworkSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NetworkSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -6137,6 +6201,10 @@ func (m *NetworkSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ClusterSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ClusterSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -6427,6 +6495,10 @@ func (m *ClusterSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *SecretSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*SecretSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -6604,6 +6676,10 @@ func (m *SecretSpec) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *ConfigSpec) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*ConfigSpec)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

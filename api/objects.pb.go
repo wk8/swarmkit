@@ -4985,6 +4985,10 @@ func valueToStringObjects(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *Meta) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Meta)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5131,6 +5135,10 @@ func (m *Meta) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Node) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Node)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5498,6 +5506,10 @@ func (m *Node) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Service) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Service)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5822,6 +5834,10 @@ func (m *Service) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Endpoint) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Endpoint)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -5967,6 +5983,10 @@ func (m *Endpoint) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Endpoint_VirtualIP) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Endpoint_VirtualIP)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -6075,6 +6095,10 @@ func (m *Endpoint_VirtualIP) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Task) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Task)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -6561,6 +6585,10 @@ func (m *Task) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *NetworkAttachment) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*NetworkAttachment)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -6820,6 +6848,10 @@ func (m *NetworkAttachment) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Network) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Network)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -7045,6 +7077,10 @@ func (m *Network) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Cluster) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Cluster)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -7505,6 +7541,10 @@ func (m *Cluster) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Secret) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Secret)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -7664,6 +7704,10 @@ func (m *Secret) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Config) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Config)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -7803,6 +7847,10 @@ func (m *Config) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Resource) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Resource)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -8004,6 +8052,10 @@ func (m *Resource) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *Extension) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*Extension)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {

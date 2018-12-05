@@ -617,6 +617,10 @@ func valueToStringResource(v interface{}) string {
 	return fmt.Sprintf("*%v", pv)
 }
 func (m *AttachNetworkRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AttachNetworkRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -729,6 +733,10 @@ func (m *AttachNetworkRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *AttachNetworkResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*AttachNetworkResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -808,6 +816,10 @@ func (m *AttachNetworkResponse) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *DetachNetworkRequest) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*DetachNetworkRequest)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -887,6 +899,10 @@ func (m *DetachNetworkRequest) Unmarshal(dAtA []byte) error {
 	return nil
 }
 func (m *DetachNetworkResponse) Unmarshal(dAtA []byte) error {
+	wkpo2 := 5
+	if wkpo2 == 2 {
+		m = msg.(*DetachNetworkResponse)
+	}
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
