@@ -2059,15 +2059,22 @@ file {
   message_type {
     name: "OperatingSystem"
     field {
-      name: "name"
+      name: "type"
       number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+      json_name: "type"
+    }
+    field {
+      name: "name"
+      number: 2
       label: LABEL_OPTIONAL
       type: TYPE_STRING
       json_name: "name"
     }
     field {
       name: "version"
-      number: 2
+      number: 3
       label: LABEL_OPTIONAL
       type: TYPE_STRING
       json_name: "version"
@@ -2083,16 +2090,22 @@ file {
       json_name: "architecture"
     }
     field {
+      name: "os"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+      options {
+        65004: "OS"
+      }
+      json_name: "os"
+    }
+    field {
       name: "operating_system"
       number: 3
       label: LABEL_OPTIONAL
       type: TYPE_MESSAGE
       type_name: ".docker.swarmkit.v1.OperatingSystem"
       json_name: "operatingSystem"
-    }
-    reserved_range {
-      start: 2
-      end: 3
     }
   }
   message_type {

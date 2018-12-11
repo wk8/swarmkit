@@ -80,21 +80,24 @@ message ResourceRequirements {
 }
 
 message OperatingSystem {
-	// The OS' name (e.g. linux)
-	string name = 1;
+	// The OS' type (e.g. "linux" or "windows")
+	string type = 1;
 
-	// The OS's version - optional
-	string version = 2;
+	// The OS' full name (e.g. "Ubuntu 18.04 LTS" or "Windows Server Datacenter Version 1709 (OS Build 16299.665)")
+	string name = 2;
+
+	// The OS's version (e.g. "18.04")
+	string version = 3;
 }
 
 message Platform {
 	// Architecture (e.g. x86_64)
 	string architecture = 1;
 
-	// The Operating System's name (e.g. linux) - deprecated, use OperatingSystem below
+	// The Operating System's type (i.e. linux or windows) - deprecated, use OperatingSystem below
 	// If/when https://github.com/gogo/protobuf/issues/527 gets implemented, then we can
 	// clean up all the redundant checks falling back to this field for clients using
-	// an older version of this message
+	// older versions of this message
 	string os = 2 [(gogoproto.customname) = "OS"];
 
 	// Operating System
