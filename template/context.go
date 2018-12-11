@@ -57,9 +57,9 @@ func NewContext(n *api.NodeDescription, t *api.Task) (ctx Context) {
 	// Add node information to context only if we have them available
 	if n != nil {
 		ctx.Node.Hostname = n.Hostname
-		ctx.Node.Platform = Platform{
-			Architecture: n.Platform.Architecture,
-			OS:           n.Platform.OperatingSystem.Name,
+		ctx.Node.Platform = api.Platform{
+			Architecture:    n.Platform.Architecture,
+			OperatingSystem: n.Platform.OperatingSystem,
 			// TODO wkpo version?
 		}
 	}

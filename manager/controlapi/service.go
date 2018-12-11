@@ -128,7 +128,10 @@ func validateContainerSpec(taskSpec api.TaskSpec) error {
 	container, err := template.ExpandContainerSpec(&api.NodeDescription{
 		Hostname: "nodeHostname",
 		Platform: &api.Platform{
-			OS:           "os",
+			OperatingSystem: &api.OperatingSystem{
+				Name:    "os_name",
+				Version: "os_version",
+			},
 			Architecture: "architecture",
 		},
 	}, &api.Task{
