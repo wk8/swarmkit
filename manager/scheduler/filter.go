@@ -289,26 +289,39 @@ func (f *PlatformFilter) Check(n *NodeInfo) bool {
 }
 
 func (f *PlatformFilter) platformEqual(imgPlatform, nodePlatform api.Platform) bool {
-	// normalize "x86_64" architectures to "amd64"
-	if imgPlatform.Architecture == "x86_64" {
-		imgPlatform.Architecture = "amd64"
-	}
-	if nodePlatform.Architecture == "x86_64" {
-		nodePlatform.Architecture = "amd64"
+	if imgPlatform.Architecture != "" && normalizePlatformArchitecture(imgPlatform) != normalizePlatformArchitecture(nodePlatform) {
+		// architectures are incompatible
+		return false
 	}
 
-	// normalize "aarch64" architectures to "arm64"
-	if imgPlatform.Architecture == "aarch64" {
-		imgPlatform.Architecture = "arm64"
-	}
-	if nodePlatform.Architecture == "aarch64" {
-		nodePlatform.Architecture = "arm64"
+	imgOSType := extractPlatformOSType(imgPlatform)
+	if imgOSType != "" && imgOSType != extractPlatformOSType(nodePlatform) {
+		return false
 	}
 
-	if (imgPlatform.Architecture == "" || imgPlatform.Architecture == nodePlatform.Architecture) && (imgPlatform.OperatingSystem.Name == "" || imgPlatform.OperatingSystem.Name == nodePlatform.OperatingSystem.Name) {
-		return true
+	return true
+}
+
+// normalizes "x86_64" architectures to "amd64", and "aarch64" to "arm64"
+// TODO (jrouge): this should probably be done somewhere else?
+func normalizePlatformArchitecture(platform api.Platform) string {
+	switch platform.Architecture {
+	case "x86_64":
+		return "amd64"
+	case "aarch64":
+		return "arm64"
 	}
-	return false
+	return platform.Architecture
+}
+
+// extracts the OS' type either from the platform newer `OperatingSystem` field,
+// or otherwise from the legacy `OS` field
+// see the comment about this inside the `Platform` message's definition in api/types.proto
+func extractPlatformOSType(platform api.Platform) string {
+	if platform.OperatingSystem != nil && platform.OperatingSystem.Type != "" {
+		return platform.OperatingSystem.Type
+	}
+	return platform.OS
 }
 
 // Explain returns an explanation of a failure.

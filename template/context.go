@@ -59,8 +59,8 @@ func NewContext(n *api.NodeDescription, t *api.Task) (ctx Context) {
 		ctx.Node.Hostname = n.Hostname
 		ctx.Node.Platform = api.Platform{
 			Architecture:    n.Platform.Architecture,
+			OS:              n.Platform.OS,
 			OperatingSystem: n.Platform.OperatingSystem,
-			// TODO wkpo version?
 		}
 	}
 	ctx.Task.ID = t.ID

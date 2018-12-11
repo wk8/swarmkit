@@ -815,7 +815,7 @@ type OperatingSystem struct {
 	Type string `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
 	// The OS' full name (e.g. "Ubuntu 18.04 LTS" or "Windows Server Datacenter Version 1709 (OS Build 16299.665)")
 	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	// The OS's version (e.g. "18.04")
+	// The OS's version (e.g. "18.04" or "1709")
 	Version string `protobuf:"bytes,3,opt,name=version,proto3" json:"version,omitempty"`
 }
 

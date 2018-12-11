@@ -86,7 +86,7 @@ message OperatingSystem {
 	// The OS' full name (e.g. "Ubuntu 18.04 LTS" or "Windows Server Datacenter Version 1709 (OS Build 16299.665)")
 	string name = 2;
 
-	// The OS's version (e.g. "18.04")
+	// The OS's version (e.g. "18.04" or "1709")
 	string version = 3;
 }
 

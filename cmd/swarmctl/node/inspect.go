@@ -62,9 +62,13 @@ func printNodeSummary(node *api.Node) {
 
 	if desc.Platform != nil {
 		fmt.Fprintln(w, "Platform:\t")
-		// TODO wkpo c populate ou ca?
-		common.FprintfIfNotEmpty(w, "  Operating System name\t: %s\n", desc.Platform.OperatingSystem.Name)
-		common.FprintfIfNotEmpty(w, "  Operating System version\t: %s\n", desc.Platform.OperatingSystem.Version)
+		if desc.Platform.OperatingSystem != nil {
+			common.FprintfIfNotEmpty(w, "  Operating System type\t: %s\n", desc.Platform.OperatingSystem.Type)
+			common.FprintfIfNotEmpty(w, "  Operating System name\t: %s\n", desc.Platform.OperatingSystem.Name)
+			common.FprintfIfNotEmpty(w, "  Operating System version\t: %s\n", desc.Platform.OperatingSystem.Version)
+		} else if desc.Platform.OS != "" {
+			common.FprintfIfNotEmpty(w, "  Operating System type\t: %s\n", desc.Platform.OS)
+		}
 		common.FprintfIfNotEmpty(w, "  Architecture\t: %s\n", desc.Platform.Architecture)
 	}
 

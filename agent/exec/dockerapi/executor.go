@@ -101,8 +101,11 @@ func (e *executor) Describe(ctx context.Context) (*api.NodeDescription, error) {
 		Hostname: info.Name,
 		Platform: &api.Platform{
 			Architecture: info.Architecture,
+			OS:           info.OSType,
 			OperatingSystem: &api.OperatingSystem{
-				Name: info.OSType,
+				Type:    info.OSType,
+				Name:    info.OperatingSystem,
+				Version: info.OSVersion,
 			},
 		},
 		Engine: &api.EngineDescription{
