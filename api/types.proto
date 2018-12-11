@@ -88,14 +88,17 @@ message OperatingSystem {
 }
 
 message Platform {
-	// 2 was 'OS' when it was just a string
-	reserved 2;
-
 	// Architecture (e.g. x86_64)
 	string architecture = 1;
 
+	// The Operating System's name (e.g. linux) - deprecated, use OperatingSystem below
+	// If/when https://github.com/gogo/protobuf/issues/527 gets implemented, then we can
+	// clean up all the redundant checks falling back to this field for clients using
+	// an older version of this message
+	string os = 2 [(gogoproto.customname) = "OS"];
+
 	// Operating System
-	OperatingSystem operating_system = 3; // [(gogoproto.wkpo) = "wkpo"];
+	OperatingSystem operating_system = 3;
 }
 
 // PluginDescription describes an engine plugin.
