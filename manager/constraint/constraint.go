@@ -37,6 +37,7 @@ type Constraint struct {
 }
 
 // Parse parses list of constraints.
+// TODO wkpo ici pour dire que version sans name ou type ca fait pas sens?
 func Parse(env []string) ([]Constraint, error) {
 	exprs := []Constraint{}
 	for _, e := range env {
@@ -150,16 +151,14 @@ func NodeMatches(constraints []Constraint, n *api.Node) bool {
 				return false
 			}
 		// TODO wkpo faut voir a quel niveau on surface qu'on peut pas donner version sans name?
-		case strings.EqualFold(constraint.key, "node.platform.os"):
-			if n.Description == nil || n.Description.Platform == nil {
-				if !constraint.Match("") {
-					return false
-				}
-				continue
-			}
-			if !constraint.Match(n.Description.Platform.OperatingSystem.Name) {
+		// the second alternative for this particular key is legacy
+		case strings.EqualFold(constraint.key, "node.platform.operating_system.type") || strings.EqualFold(constraint.key, "node.platform.os"):
+			if !constraint.Match(extractNodeOSType(n)) {
 				return false
 			}
+		case strings.EqualFold(constraint.key, "node.platform.operating_system.name") {
+
+		}
 		case strings.EqualFold(constraint.key, "node.platform.arch"):
 			if n.Description == nil || n.Description.Platform == nil {
 				if !constraint.Match("") {
@@ -206,4 +205,19 @@ func NodeMatches(constraints []Constraint, n *api.Node) bool {
 	}
 
 	return true
+}
+
+// extracts the OS' type either from the platform newer `OperatingSystem` field,
+// or otherwise from the legacy `OS` field
+// see the comment about this inside the `Platform` message's definition in api/types.proto
+func extractNodeOSType(node *api.Node) string {
+	if node.Description == nil || node.Description.Platform == nil {
+		return ""
+	}
+
+	platform := node.Description.Platform
+	if platform.OperatingSystem != nil && platform.OperatingSystem.Type != "" {
+		return platform.OperatingSystem.Type
+	}
+	return platform.OS
 }
